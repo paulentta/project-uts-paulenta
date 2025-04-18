@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toba Lake Adventure</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/daftar-wisata.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="navbar">
+
+                <!--Logo dan Judul-->
+                <div class="left">
+                    <img src="assets/logo.png">
+                    <h2>Toba Adventure</h2>
+                </div>
+
+                <!--Menu Navigasi-->
+                <nav class="right">
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="daftar-wisata.html">Daftar Wisata</a></li>
+                        <li><a href="pemesanan.html">Pemesanan</a></li>
+                        <li class="dropdown">
+                            <a href="#">Tentang ▼</a>
+                            <ul class="dropdown-content">
+                                <li><a href="testimoni.html">Testimoni</a></li>
+                                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                                <li><a href="kontak-kami.html">Kontak Kami</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--Ikon Hamburger-->
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+            </div>
+        </header>
+
+        <main>
+            <!--Menu Hamburger-->
+            <section>
+                <div class="overlay" id="navbar">
+                    <a href="index.html">Beranda</a>
+                    <a href="daftar-wisata.html">Daftar Wisata</a>
+                    <a href="pemesanan.html">Pemesanan</a>
+                    <a href="testimoni.html">Testimoni</a>
+                    <a href="tentang-kami.html">Tentang Kami</a>
+                    <a href="kontak-kami.html">Kontak Kami</a>
+            </div>
+            </section>
+            
+            <!--Daftar Wisata-->
+            <section>
+                <section id="daftar-layanan">
+                    <h2>Daftar Layanan Wisata</h2>
+                    <div class="layanan-grid">
+                        <div class="layanan-item">
+                            <img src="assets/snorekling.jpg" alt="Snorkeling" class="layanan-img">
+                            <h3>Snorkeling</h3>
+                            <p>Harga: Rp 150.000 / jam</p>
+                        </div>
+                         <div class="layanan-item">
+                            <img src="assets/jetski.jpg" alt="Jetski" class="layanan-img">
+                            <h3>Jetski</h3>
+                            <p>Harga: Rp 300.000 / jam</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/banana-boat.jpg" alt="Banana Boat" class="layanan-img">
+                            <h3>Banana Boat</h3>
+                            <p>Harga: Rp 200.000 / 15 menit</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/paragliding.jpg" alt="Paragliding" class="layanan-img">
+                            <h3>Paragliding</h3>
+                            <p>Harga: Rp 500.000 / penerbangan</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/kayak.jpg" alt="Kayak" class="layanan-img">
+                            <h3>Kayak</h3>
+                            <p>Harga: Rp 100.000 / jam</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/flyboard.jpg" alt="Flyboard" class="layanan-img">
+                            <h3>Flyboard</h3>
+                            <p>Harga: Rp 400.000 / 20 menit</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/fishing.jpg" alt="Fishing" class="layanan-img">
+                            <h3>Fishing</h3>
+                            <p>Harga: Rp 250.000 / jam</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/diving.jpg" alt="Diving" class="layanan-img">
+                            <h3>Diving</h3>
+                            <p>Harga: Rp 700.000 / penyelaman</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/boat-tour.jpg" alt="Boat Tour" class="layanan-img">
+                            <h3>Boat Tour</h3>
+                            <p>Harga: Rp 500.000 / 2 jam</p>
+                        </div>
+                        <div class="layanan-item">
+                            <img src="assets/camping.jpg" alt="Camping" class="layanan-img">
+                            <h3>Camping</h3>
+                            <p>Harga: Rp 300.000 / malam</p>
+                        </div>
+                    </div>
+                    
+                </section>
+
+            </section>
+
+            <!--Daftar Paket(tabel)-->
+            <section>
+                    <div style="overflow-x:auto; flex-grow: 1;">
+                        <table border="1" cellpadding="10" cellspacing="0" style="width: 100%; border-collapse: collapse; text-align: center;">
+                            <thead style="background-color: #f0f0f0;">
+                                <tr>
+                                    <th>No</th>
+                                    <th>Nama Paket</th>
+                                    <th>Layanan</th>
+                                    <th>Fasilitas</th>
+                                    <th>Harga/<em>pax</em></th>
+                                    <th>Harga/<em>2pax or more</em></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            
+                                <tr>
+                                    <td>1</td>
+                                    <td>Paket Seru Samosir</td>
+                                    <td>Jetski + Keliling Samosir</td>
+                                    <td>Snack & Air Mineral, Jaket Pelampung</td>
+                                    <td>Rp 500.000</td>
+                                    <td>Rp 900.000</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Paket Petualang Air</td>
+                                    <td>Snorkeling + Banana Boat + Kayak</td>
+                                    <td>Alat Snorkeling, Makan Siang</td>
+                                    <td>Rp 400.000</td>
+                                    <td>Rp 750.000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Paket Udara Bebas</td>
+                                    <td>Paragliding + Flyboard</td>
+                                    <td>Instruktur Profesional, Dokumentasi Foto</td>
+                                    <td>Rp 650.000</td>
+                                    <td>Rp 1.200.000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Paket Santai</td>
+                                    <td>Boat Tour + Fishing</td>
+                                    <td>Alat Pancing, Teh Hangat</td>
+                                    <td>Rp 350.000</td>
+                                    <td>Rp 650.000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Paket Alam Malam</td>
+                                    <td>Camping + Kayak</td>
+                                    <td>Tenda, Makan Malam BBQ</td>
+                                    <td>Rp 300.000</td>
+                                    <td>Rp 550.000</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Paket Air Extreme</td>
+                                    <td>Jetski + Flyboard</td>
+                                    <td>Helm & Rompi Keselamatan, Air Mineral</td>
+                                    <td>Rp 600.000</td>
+                                    <td>Rp 1.100.000</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Paket Eksplor Samosir</td>
+                                    <td>Boat Tour + Keliling Samosir</td>
+                                    <td>Guide Lokal, Snack & Air Mineral</td>
+                                    <td>Rp 450.000</td>
+                                    <td>Rp 800.000</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Paket Komplit Liburan</td>
+                                    <td>Snorkeling + Paragliding + Camping</td>
+                                    <td>3x Makan, Tenda, Dokumentasi</td>
+                                    <td>Rp 750.000</td>
+                                    <td>Rp 1.400.000</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Paket Keluarga Ceria</td>
+                                    <td>Banana Boat + Boat Tour + Fishing</td>
+                                    <td>Pelampung, Snack, Alat Pancing</td>
+                                    <td>Rp 500.000</td>
+                                    <td>Rp 950.000</td>
+                                </tr>
+                                <tr>    
+                                    <td>10</td>
+                                    <td>Paket Sunset Samosir</td>
+                                    <td>Boat Tour + Camping</td>
+                                    <td>Makan Malam, Api Unggun</td>
+                                    <td>Rp 400.000</td>
+                                    <td>Rp 750.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </section>
+        </main>
+        
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="footer-logo mb-3">
+                  <img src="assets/logo.png" alt="Logo Toba Adventure">
+                  <h4 class="mt-2">Toba Adventure</h4>
+                </div>
+            
+                <div class="footer-links mb-3">
+                  <a href="index.html">Beranda</a>
+                  <a href="daftar-wisata.html">Wisata</a>
+                  <a href="pemesanan.html">Pemesanan</a>
+                  <a href="tentang-kami.html">Tentang Kami</a>
+                  <a href="kontak-kami.html">Kontak</a>
+                </div>
+            
+                <p class="copyright">© 2025 Toba Adventure. All rights reserved.</p>
+              </div>
+        </footer>
+
+        <script src="js\script.js"></script>
+    </body>
+</html>

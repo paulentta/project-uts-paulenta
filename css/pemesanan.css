@@ -1,0 +1,311 @@
+body {
+    font-family: poppins !important;
+    padding-top: 130px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+    width: 100%;
+    background-color: #1f495c;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+}
+
+/*Logo dan title*/
+.left   {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.left img {
+    height: 4rem;
+    width: 4rem;
+}
+
+/*Navigasi*/
+.right {
+    margin-right: 20px;
+}
+.right ul {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.right ul li {
+    list-style-type: none;
+}
+
+.right ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.right ul li a:hover {
+    color: white;
+}
+
+
+/*Dropdown*/
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+
+.dropdown ul li {
+  position: relative;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #4a4646;
+  font-size: 16px;
+}
+.dropdown ul li a:hover{
+    color: black;
+    border-radius: 10px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none!important;
+  position: absolute;
+  top: 100%; /* supaya muncul di bawah tombol */
+  left: 0;
+  background-color: white;
+  min-width: 130px;
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+  color: #333;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Munculkan saat hover */
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+
+
+/*Hamburger*/
+.hamburger {
+    display: none;
+}
+.overlay {
+    display: none;
+}
+
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    margin-right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+
+  .overlay {
+    display: none;
+    position: fixed;          
+    top: 130px;               
+    left: 0;
+    width: 100%;
+    height: auto;             
+    background-color: white;
+    z-index: 999;             
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  
+  .overlay a {
+    text-align: center;
+    text-decoration: none;
+    color: #444935;
+    padding: 15px;
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    font-weight: 500;
+  }
+  
+  .overlay a:hover {
+    color: #848975;
+  }
+  
+  #form-container {
+    background-image: url('../assets/banner-utama.jpg'); /* Ganti dengan path gambar kamu */
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 1rem;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+  #form-pemesanan {
+    min-width: 450px;
+    position: relative;
+    margin: 15px auto;
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+#form-pemesanan h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #0a0a0a;
+}
+
+label {
+    font-weight: 500;
+}
+
+.form-control:focus {
+    border-color: #171e5b;
+    box-shadow: 0 0 0 0.2rem rgba(0, 100, 0, 0.25);
+}
+
+.btn-success {
+    background-color: #1f495c !important;
+    border: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-success:hover {
+    background-color: #295569 !important;
+}
+ 
+/*footer*/
+
+.footer {
+  position: relative;
+  background-color: #1f495c;
+  color: white;
+  padding: 40px 20px;
+
+}
+
+.footer-logo img {
+  height: 60px;
+  width: 60px;
+}
+
+.footer-logo h4 {
+  font-weight: 600;
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover{
+  color: gray;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: white;
+}
+  /* Responsive Rules */
+  @media (max-width: 850px) {
+    .right {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .overlay.active {
+        display: flex;
+    }
+
+    .overlay ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .overlay .dropdown ul {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .overlay .dropdown:hover .dropdown-content {
+        display: none !important; /* Nonaktifkan hover di mobile */
+    }
+
+    .overlay .dropdown-content.active {
+        display: block !important;
+    }
+  }
+
+  @media (max-width:575px) {
+    #form-pemesanan {
+      min-width: 200px;
+      font-size: 12px;
+    }
+
+  }

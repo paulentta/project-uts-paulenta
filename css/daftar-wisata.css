@@ -1,0 +1,338 @@
+body {
+    font-family: poppins !important;
+    padding-top: 130px;
+}
+
+.header {
+    width: 100%;
+    background-color: #1f495c;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+}
+
+/*Logo dan title*/
+.left   {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.left img {
+    height: 4rem;
+    width: 4rem;
+}
+
+/*Navigasi*/
+.right {
+    margin-right: 20px;
+}
+.right ul {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.right ul li {
+    list-style-type: none;
+}
+
+.right ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.right ul li a:hover {
+    color: white;
+}
+
+
+/*Dropdown*/
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+
+.dropdown ul li {
+  position: relative;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #4a4646;
+  font-size: 16px;
+}
+.dropdown ul li a:hover{
+    color: black;
+    border-radius: 10px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none!important;
+  position: absolute;
+  top: 100%; /* supaya muncul di bawah tombol */
+  left: 0;
+  background-color: white;
+  min-width: 130px;
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+  color: #333;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Munculkan saat hover */
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+
+
+/*Hamburger*/
+.hamburger {
+    display: none;
+}
+.overlay {
+    display: none;
+}
+
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    margin-right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+
+  .overlay {
+    display: none;
+    position: fixed;          
+    top: 130px;               
+    left: 0;
+    width: 100%;
+    height: auto;             
+    background-color: white;
+    z-index: 999;             
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  
+  .overlay a {
+    text-align: center;
+    text-decoration: none;
+    color: #444935;
+    padding: 15px;
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    font-weight: 500;
+  }
+  
+  .overlay a:hover {
+    color: #848975;
+  }
+
+
+
+/*Daftar Layanan*/
+ 
+/* Daftar Layanan */
+#daftar-layanan {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#daftar-layanan h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #1f5c4d;
+}
+
+.layanan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.layanan-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.layanan-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.layanan-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.layanan-item h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #1f5c4d;
+}
+
+.layanan-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Tabel Paket */
+table {
+    margin: 40px auto;
+    width: 95%;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    color: #1f495c;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/*footer*/
+
+.footer {
+  background-color: #1f495c;
+  color: white;
+  padding: 40px 20px;
+
+}
+
+.footer-logo img {
+  height: 60px;
+  width: 60px;
+}
+
+.footer-logo h4 {
+  font-weight: 600;
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover{
+  color: gray;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+  /* Responsive Rules */
+  @media (max-width: 850px) {
+    .right {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .overlay.active {
+        display: flex;
+    }
+
+    .overlay ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .overlay .dropdown ul {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .overlay .dropdown:hover .dropdown-content {
+        display: none !important; /* Nonaktifkan hover di mobile */
+    }
+
+    .overlay .dropdown-content.active {
+        display: block !important;
+    }
+    .layanan-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+  }

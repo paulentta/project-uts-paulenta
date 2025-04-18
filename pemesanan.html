@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toba Lake Adventure</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/pemesanan.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="navbar">
+
+                <!--Logo dan Judul-->
+                <div class="left">
+                    <img src="assets/logo.png">
+                    <h3>Toba Adventure</h3>
+                </div>
+
+                <!--Menu Navigasi-->
+                <nav class="right">
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="daftar-wisata.html">Daftar Wisata</a></li>
+                        <li><a href="pemesanan.html">Pemesanan</a></li>
+                        <li class="dropdown">
+                            <a href="#">Tentang ▼</a>
+                            <ul class="dropdown-content">
+                                <li><a href="testimoni.html">Testimoni</a></li>
+                                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                                <li><a href="kontak-kami.html">Kontak Kami</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--Ikon Hamburger-->
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+            </div>
+        </header>
+
+        <main id="form-container"> 
+            <!--Menu Hamburger-->
+            <section>
+                <div class="overlay" id="navbar">
+                    <a href="index.html">Beranda</a>
+                    <a href="daftar-wisata.html">Daftar Wisata</a>
+                    <a href="pemesanan.html">Pemesanan</a>
+                    <a href="testimoni.html">Testimoni</a>
+                    <a href="tentang-kami.html">Tentang Kami</a>
+                    <a href="kontak-kami.html">Kontak Kami</a>>
+                </div>
+            </section>
+
+            <!--Form Pemesanan-->
+            <section id="form-pemesanan" style="padding: 2rem;">
+                <h2>Form Pemesanan</h2>
+                <form id="pemesananForm" onsubmit="return kirimPesanWA();">
+                    <div class="mb-3">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="hp">Nomor Handphone</label>
+                        <input type="tel" class="form-control" id="hp" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="layanan">Tipe Layanan</label>
+                        <select class="form-control" id="layanan" onchange="toggleLayanan()" required>
+                            <option value="">-- Pilih Tipe Layanan --</option>
+                            <option value="biasa">Layanan Biasa</option>
+                            <option value="paket">Paket Wisata</option>
+                        </select>
+                    </div>
+
+                    <!--Layanan Biasa-->
+                    <div class="mb-3" id="layananBiasa" style="display: none;">
+                        <label for="layananBiasaSelect">Pilih Layanan</label>
+                        <select class="form-control" id="layananBiasaSelect">
+                            <option value="">-- Pilih Layanan --</option>
+                            <option>Snorkeling</option>
+                            <option>Jetski</option>
+                            <option>Banana Boat</option>
+                            <option>Paragliding</option>
+                            <option>Kayak</option>
+                            <option>Flyboard</option>
+                            <option>Fishing</option>
+                            <option>Diving</option>
+                            <option>Boat Tour</option>
+                            <option>Camping</option>
+                        </select>
+                    </div>
+
+                    <!--Layanan Paket-->
+                    <div class="mb-3" id="layananPaket" style="display: none;">
+                        <label for="paketSelect">Pilih Paket</label>
+                        <select class="form-control" id="paketSelect">
+                            <option value="">-- Pilih Paket Wisata --</option>
+                            <option>Paket Seru Samosir</option>
+                            <option>Paket Petualang Air</option>
+                            <option>Paket Udara Bebas</option>
+                            <option>Paket Santai</option>
+                            <option>Paket Alam Malam</option>
+                            <option>Paket Air Extreme</option>
+                            <option>Paket Eksplor Samosir</option>
+                            <option>Paket Komplit Liburan</option>
+                            <option>Paket Keluarga Ceria</option>
+                            <option>Paket Sunset Samosir</option>
+                        </select>
+
+                        <label for="jumlahPax" class="mt-3">Jumlah Orang</label>
+                        <select class="form-control" id="jumlahPax">
+                            <option value="">-- Pilih Jumlah Orang --</option>
+                            <option value="1">1 Pax</option>
+                            <option value="2">2 Pax or More</option>
+                        </select>
+                    </div>
+
+                    <!--Tanggal-->
+                    <div class="mb-3">
+                        <label for="tanggal">Tanggal</label>
+                        <input type="date" class="form-control" id="tanggal" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success">Pesan Sekarang</button>
+                </form>
+            </section>
+
+
+        </main>
+        
+        <footer class="footer">
+            <div class="container text-center">
+                <div class="footer-logo mb-3">
+                  <img src="assets/logo.png" alt="Logo Toba Adventure">
+                  <h4 class="mt-2">Toba Adventure</h4>
+                </div>
+            
+                <div class="footer-links mb-3">
+                  <a href="index.html">Beranda</a>
+                  <a href="daftar-wisata.html">Wisata</a>
+                  <a href="pemesanan.html">Pemesanan</a>
+                  <a href="tentang-kami.html">Tentang Kami</a>
+                  <a href="kontak-kami.html">Kontak</a>
+                </div>
+            
+                <p class="copyright">© 2025 Toba Adventure. All rights reserved.</p>
+              </div>
+        </footer>
+
+        <script src="js/pemesanan.js"></script>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Toba Lake Adventure</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/kontak-kami.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="navbar">
+
+                <!--Logo dan Judul-->
+                <div class="left">
+                    <img src="assets/logo.png">
+                    <h3>Toba Adventure</h3>
+                </div>
+
+                <!--Menu Navigasi-->
+                <nav class="right">
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="daftar-wisata.html">Daftar Wisata</a></li>
+                        <li><a href="pemesanan.html">Pemesanan</a></li>
+                        <li class="dropdown">
+                            <a href="#">Tentang ▼</a>
+                            <ul class="dropdown-content">
+                                <li><a href="testimoni.html">Testimoni</a></li>
+                                <li><a href="tentang-kami.html">Tentang Kami</a></li>
+                                <li><a href="kontak-kami.html">Kontak Kami</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!--Ikon Hamburger-->
+                <div class="hamburger" onclick="toggleMenu()">☰</div>
+            </div>
+        </header>
+
+        <main>
+            <!--Menu Hamburger-->
+            <section>
+                <div class="overlay" id="navbar">
+                    <a href="index.html">Beranda</a>
+                    <a href="daftar-wisata.html">Daftar Wisata</a>
+                    <a href="pemesanan.html">Pemesanan</a>
+                    <a href="testimoni.html">Testimoni</a>
+                    <a href="tentang-kami.html">Tentang Kami</a>
+                    <a href="kontak-kami.html">Kontak Kami</a>
+            </div>
+            </section>
+            
+            <!--kontak kami-->
+            <section class="kontak-kami-section container">
+                <h2 class="mb-4 text-center">Hubungi Kami</h2>
+                <div class="row justify-content-center align-items-start">
+                    <!-- Formulir Kontak -->
+                    <div class="col-md-6 mb-4">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Alamat Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="contoh@email.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="pesan" class="form-label">Pesan</label>
+                                <textarea class="form-control" id="pesan" rows="5" placeholder="Tulis pesan Anda..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        </form>
+                    </div>
+            
+                    <!-- Alamat & Kontak & Map -->
+                    <div class="col-md-6">
+                        <h5>Alamat Kami:</h5>
+                        <p>
+                            <i class="bi bi-geo-alt-fill me-2"></i> Toba Lake Adventure<br>
+                            Jl. Raya Parapat No.10, Simalungun<br>
+                            Sumatera Utara, Indonesia 21174
+                        </p>
+                        <p>
+                            <i class="bi bi-telephone-fill me-2"></i> <a href="tel:+6281234567890">+62 812-3456-7890</a><br>
+                            <i class="bi bi-instagram me-2"></i> <a href="https://instagram.com/tobalakeadventure" target="_blank">@tobalakeadventure</a>
+                        </p>
+                        <div class="map-responsive">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31883.847382452524!2d98.6449857!3d2.6842519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031d13c41507d25%3A0x861378aab3f62264!2sDanau%20Toba!5e0!3m2!1sid!2sid!4v1713539829483!5m2!1sid!2sid" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    
+        </main>
+        
+        <footer></footer>
+
+        <script src="js\script.js"></script>
+    </body>
+</html>

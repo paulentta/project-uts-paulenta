@@ -1,0 +1,459 @@
+body {
+    font-family: poppins !important;
+    padding-top: 130px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+    width: 100%;
+    background-color: #1f495c;
+    color: white;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+}
+
+/*Logo dan title*/
+.left   {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.left img {
+    height: 4rem;
+    width: 4rem;
+}
+
+/*Navigasi*/
+.right {
+    margin-right: 20px;
+}
+.right ul {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.right ul li {
+    list-style-type: none;
+}
+
+.right ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.right ul li a:hover {
+    color: white;
+}
+
+
+/*Dropdown*/
+
+.dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+
+.dropdown ul li {
+  position: relative;
+}
+
+.dropdown ul li a {
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #4a4646;
+  font-size: 16px;
+}
+.dropdown ul li a:hover{
+    color: black;
+    border-radius: 10px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none!important;
+  position: absolute;
+  top: 100%; /* supaya muncul di bawah tombol */
+  left: 0;
+  background-color: white;
+  min-width: 130px;
+  z-index: 1;
+}
+
+.dropdown-content li a {
+  padding: 10px;
+  color: #333;
+}
+
+.dropdown-content li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Munculkan saat hover */
+.dropdown:hover .dropdown-content {
+  display: block !important;
+}
+
+
+
+/*Hamburger*/
+.hamburger {
+    display: none;
+}
+.overlay {
+    display: none;
+}
+
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    margin-right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  
+
+  .overlay {
+    display: none;
+    position: fixed;          
+    top: 130px;               
+    left: 0;
+    width: 100%;
+    height: auto;             
+    background-color: white;
+    z-index: 999;             
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  }
+  
+  
+  .overlay a {
+    text-align: center;
+    text-decoration: none;
+    color: #444935;
+    padding: 15px;
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    font-weight: 500;
+  }
+  
+  .overlay a:hover {
+    color: #848975;
+  }
+  
+/*Galeri Danau toba*/
+#galeri {
+  margin: 10px;
+  gap: 15px;
+  justify-content: center;
+}
+#galeri img {
+  padding: 15px;
+  border-radius: 20px;
+}
+
+#galeri .card-img-top {
+  height: 300px;         
+  object-fit: cover;    
+}
+
+#galeri .card {
+  transform: scale(1.05);     
+  transition: transform 0.3s ease;
+}
+
+#galeri .card:hover {
+  transform: scale(1.08);   
+}
+
+
+/*Daftar Layanan */
+.daftar-layanan{
+  background-color: #e9eeef;
+  padding-bottom: 30px;
+}
+
+.daftar-layanan h2 {
+  font-weight: 700;
+  padding: 30px 0;
+  color: #00796b;
+  font-size: 2rem;
+}
+
+#box-layanan {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #145a32;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  color: #4a4a4a;
+}
+
+.card-title, .card-text {
+  word-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+}
+
+/*spacing dan alignment*/
+.card-body h5 {
+  font-weight: 600;
+  color: #333;
+}
+
+.card-body p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/*footer*/
+
+.footer {
+  background-color: #1f495c;
+  color: white;
+  padding: 40px 20px;
+
+}
+
+.footer-logo img {
+  height: 60px;
+  width: 60px;
+}
+
+.footer-logo h4 {
+  font-weight: 600;
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover{
+  color: gray;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: white;
+}
+
+  /* Responsive Rules */
+  @media (max-width: 850px) {
+    .right {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .overlay.active {
+        display: flex;
+    }
+
+    .overlay ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .overlay .dropdown ul {
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .overlay .dropdown:hover .dropdown-content {
+        display: none !important; /* Nonaktifkan hover di mobile */
+    }
+
+    .overlay .dropdown-content.active {
+        display: block !important;
+    }
+
+    #galeri {
+      margin: 20px;
+    }
+
+    .card-img-top {
+      height: 200px;
+  }
+
+  .card-body p {
+      font-size: 1rem;
+  }
+
+  .footer-logo img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a:hover{
+    color: gray;
+  }
+  .footer-logo h4 {
+    font-size: 1rem;
+  }
+}
+
+
+/* === Responsive untuk Mobile (<576px) === */
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 100px;
+  }
+
+  .header {
+    padding: 15px 10px;
+  }
+
+  .left img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .right ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card {
+    margin: 10px 0;
+  }
+
+  .card-img-top {
+    height: 180px;
+  }
+
+  .card-body h5 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .card-body p {
+    font-size: 0.85rem;
+    text-align: justify;
+  }
+
+  #galeri {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-text {
+    font-size: 0.85rem;
+  }
+
+  .daftar-layanan h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .footer {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .footer-logo img {
+    height: 45px;
+    width: 45px;
+  }
+
+  .footer-logo h4 {
+    font-size: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
