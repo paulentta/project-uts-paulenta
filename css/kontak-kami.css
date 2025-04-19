@@ -1,6 +1,11 @@
 body {
   font-family: poppins !important;
   padding-top: 130px;
+  background-image: url('../assets/banner-utama.jpg'); /* Ganti path ini sesuai lokasi gambar kamu */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
 }
 
 main {
@@ -169,7 +174,7 @@ display: block !important;
   padding: 50px 30px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  margin-bottom: 40px;
+  margin: 20px;
 }
 
 .kontak-kami-section h2 {
