@@ -10,7 +10,8 @@ main {
 
 .header {
     width: 100%;
-    background-color: rgb(196, 209, 233);
+    background-color: #1f495c;
+    color: white;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -55,11 +56,11 @@ main {
 .right ul li a{
     text-decoration: none;
     font-size: 18px;
-    color: black;
+    color: white;
 }
 
 .right ul li a:hover {
-    color: white;
+    color: lightgray;
 }
 
 
@@ -167,6 +168,140 @@ main {
   .overlay a:hover {
     color: #848975;
   }
+
+  /* Form container styling */
+  #formTestimoni {
+   max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+/* Label */
+  #formTestimoni .form-label {
+    font-weight: 500;
+    color: #333;
+  }
+
+/* Input & Textarea */
+  #formTestimoni input[type="text"],
+  #formTestimoni input[type="date"],
+  #formTestimoni textarea {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  #formTestimoni input:focus,
+  #formTestimoni textarea:focus {
+    border-color: #4c28a7;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+    outline: none;
+  }
+
+  /* Submit button */
+  #formTestimoni button[type="submit"] {
+    background-color: #1f495c;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  #formTestimoni button[type="submit"]:hover {
+  background-color: #a8c2e1;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  #daftarTestimoni {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .testimoni-card {
+    width: 18rem;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+  }
+
+  .testimoni-card h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+
+  .testimoni-card p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  form textarea {
+    resize: none;
+  }
+
+  
+.footer {
+  background-color: #1f495c;
+  color: white;
+  padding: 40px 20px;
+
+}
+
+.footer-logo img {
+  height: 60px;
+  width: 60px;
+}
+
+.footer-logo h4 {
+  font-weight: 600;
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover{
+  color: gray;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: white;
+}
   
   /* Responsive Rules */
   @media (max-width: 850px) {
@@ -202,4 +337,27 @@ main {
     .overlay .dropdown-content.active {
         display: block !important;
     }
+    
+  }
+
+  @media (max-width: 575px) {
+    .testimoni-card {
+      padding: 15px;
+    }
+    .testimoni-card h5 {
+      font-size: 16px;
+    }
+    .testimoni-card p {
+      font-size: 14px;
+    }
+
+    .footer {
+      text-align: center;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
   }

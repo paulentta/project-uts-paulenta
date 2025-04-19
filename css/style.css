@@ -60,7 +60,7 @@ main {
 }
 
 .right ul li a:hover {
-    color: white;
+    color: lightgray;
 }
 
 
@@ -264,6 +264,8 @@ main {
   color: #666;
 }
 
+
+
 /*footer*/
 
 .footer {
@@ -311,8 +313,9 @@ main {
   color: white;
 }
 
+
   /* Responsive Rules */
-  @media (max-width: 850px) {
+@media (max-width: 850px) {
     .right {
         display: none;
     }
@@ -379,24 +382,6 @@ main {
 
 /* === Responsive untuk Mobile (<576px) === */
 @media (max-width: 575.98px) {
-  body {
-    padding-top: 100px;
-  }
-
-  .header {
-    padding: 15px 10px;
-  }
-
-  .left img {
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .right ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .card {
     margin: 10px 0;
   }
