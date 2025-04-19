@@ -55,81 +55,83 @@
             </section>
 
             <!--Form Pemesanan-->
-            <section id="form-pemesanan" style="padding: 2rem;">
-                <h2>Form Pemesanan</h2>
-                <form id="pemesananForm" onsubmit="return kirimPesanWA();">
-                    <div class="mb-3">
-                        <label for="nama">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="nama" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="hp">Nomor Handphone</label>
-                        <input type="tel" class="form-control" id="hp" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email">Alamat Email</label>
-                        <input type="email" class="form-control" id="email" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="layanan">Tipe Layanan</label>
-                        <select class="form-control" id="layanan" onchange="toggleLayanan()" required>
-                            <option value="">-- Pilih Tipe Layanan --</option>
-                            <option value="biasa">Layanan Biasa</option>
-                            <option value="paket">Paket Wisata</option>
-                        </select>
-                    </div>
+            <section id="form-container">            
+                <div id="form-pemesanan" style="padding: 2rem;">
+                    <h2>Form Pemesanan</h2>
+                    <form id="pemesananForm" onsubmit="return kirimPesanWA();">
+                        <div class="mb-3">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="nama" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="hp">Nomor Handphone</label>
+                            <input type="tel" class="form-control" id="hp" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="layanan">Tipe Layanan</label>
+                            <select class="form-control" id="layanan" onchange="toggleLayanan()" required>
+                                <option value="">-- Pilih Tipe Layanan --</option>
+                                <option value="biasa">Layanan Biasa</option>
+                                <option value="paket">Paket Wisata</option>
+                            </select>
+                        </div>
 
-                    <!--Layanan Biasa-->
-                    <div class="mb-3" id="layananBiasa" style="display: none;">
-                        <label for="layananBiasaSelect">Pilih Layanan</label>
-                        <select class="form-control" id="layananBiasaSelect">
-                            <option value="">-- Pilih Layanan --</option>
-                            <option>Snorkeling</option>
-                            <option>Jetski</option>
-                            <option>Banana Boat</option>
-                            <option>Paragliding</option>
-                            <option>Kayak</option>
-                            <option>Flyboard</option>
-                            <option>Fishing</option>
-                            <option>Diving</option>
-                            <option>Boat Tour</option>
-                            <option>Camping</option>
-                        </select>
-                    </div>
+                        <!--Layanan Biasa-->
+                        <div class="mb-3" id="layananBiasa" style="display: none;">
+                            <label for="layananBiasaSelect">Pilih Layanan</label>
+                            <select class="form-control" id="layananBiasaSelect">
+                                <option value="">-- Pilih Layanan --</option>
+                                <option>Snorkeling</option>
+                                <option>Jetski</option>
+                                <option>Banana Boat</option>
+                                <option>Paragliding</option>
+                                <option>Kayak</option>
+                                <option>Flyboard</option>
+                                <option>Fishing</option>
+                                <option>Diving</option>
+                                <option>Boat Tour</option>
+                                <option>Camping</option>
+                            </select>
+                        </div>
 
-                    <!--Layanan Paket-->
-                    <div class="mb-3" id="layananPaket" style="display: none;">
-                        <label for="paketSelect">Pilih Paket</label>
-                        <select class="form-control" id="paketSelect">
-                            <option value="">-- Pilih Paket Wisata --</option>
-                            <option>Paket Seru Samosir</option>
-                            <option>Paket Petualang Air</option>
-                            <option>Paket Udara Bebas</option>
-                            <option>Paket Santai</option>
-                            <option>Paket Alam Malam</option>
-                            <option>Paket Air Extreme</option>
-                            <option>Paket Eksplor Samosir</option>
-                            <option>Paket Komplit Liburan</option>
-                            <option>Paket Keluarga Ceria</option>
-                            <option>Paket Sunset Samosir</option>
-                        </select>
+                        <!--Layanan Paket-->
+                        <div class="mb-3" id="layananPaket" style="display: none;">
+                            <label for="paketSelect">Pilih Paket</label>
+                            <select class="form-control" id="paketSelect">
+                                <option value="">-- Pilih Paket Wisata --</option>
+                                <option>Paket Seru Samosir</option>
+                                <option>Paket Petualang Air</option>
+                                <option>Paket Udara Bebas</option>
+                                <option>Paket Santai</option>
+                                <option>Paket Alam Malam</option>
+                                <option>Paket Air Extreme</option>
+                                <option>Paket Eksplor Samosir</option>
+                                <option>Paket Komplit Liburan</option>
+                                <option>Paket Keluarga Ceria</option>
+                                <option>Paket Sunset Samosir</option>
+                            </select>
 
-                        <label for="jumlahPax" class="mt-3">Jumlah Orang</label>
-                        <select class="form-control" id="jumlahPax">
-                            <option value="">-- Pilih Jumlah Orang --</option>
-                            <option value="1">1 Pax</option>
-                            <option value="2">2 Pax or More</option>
-                        </select>
-                    </div>
+                            <label for="jumlahPax" class="mt-3">Jumlah Orang</label>
+                            <select class="form-control" id="jumlahPax">
+                                <option value="">-- Pilih Jumlah Orang --</option>
+                                <option value="1">1 Pax</option>
+                                <option value="2">2 Pax or More</option>
+                            </select>
+                        </div>
 
-                    <!--Tanggal-->
-                    <div class="mb-3">
-                        <label for="tanggal">Tanggal</label>
-                        <input type="date" class="form-control" id="tanggal" required>
-                    </div>
+                        <!--Tanggal-->
+                        <div class="mb-3">
+                            <label for="tanggal">Tanggal</label>
+                            <input type="date" class="form-control" id="tanggal" required>
+                        </div>
 
-                    <button type="submit" class="btn btn-success">Kirim</button>
-                </form>
+                        <button type="submit" class="btn btn-success">Kirim</button>
+                    </form>
+                </div>
             </section>
 
 
